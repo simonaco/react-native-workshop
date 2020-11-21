@@ -24,7 +24,7 @@ export default ({ coffeeShop }) => {
       <Card.Title>{coffeeShop.name}</Card.Title>
       <Card.Divider />
       <Card.Image source={{ uri: coffeeShop.image_url }} />
-      <Text style={{ marginBottom: 10 }}>{review.text}</Text>
+      <Text style={{ marginBottom: 10 }}>{coffeeShop.location.address}</Text>
       <Button
         icon={<Icon name="code" color="#ffffff" />}
         buttonStyle={{
