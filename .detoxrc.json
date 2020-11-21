@@ -1,0 +1,12 @@
+{
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/coffeenut.app",
+        "build": "xcodebuild -workspace ios/coffeenut.xcodeproj -scheme coffeenut -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 11 Pro"
+        }
+      }
+    }
+  }
