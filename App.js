@@ -5,6 +5,7 @@ import { ListItem, Avatar } from "react-native-elements";
 import Constants from "expo-constants";
 import fixture from "./fixture";
 import axios from "axios";
+import CoffeeShop from "./CoffeeShop";
 
 const api = axios.create({
   baseURL: "https://api.yelp.com/v3",
@@ -14,7 +15,7 @@ const api = axios.create({
 });
 const userLocation = { latitude: "51.5265", longitude: "-0.0825" };
 export default function App() {
-  /*const [coffeeShops, setCoffeeShops] = useState([]);
+  const [coffeeShops, setCoffeeShops] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       const result = await api.get("/businesses/search", {
@@ -28,15 +29,12 @@ export default function App() {
       setCoffeeShops(result.data.businesses);
     };
     fetchData();
-  }, []);*/
-  const coffeeShops = fixture;
+  }, []);
+
   return (
     <View style={styles.container}>
       {coffeeShops.map((coffeeShop, i) => (
-        <ListItem key={i} bottomDivider>
-          <Avatar source={{ uri: coffeeShop.image_url }} />
-          <ListItem.Title>{coffeeShop.name}</ListItem.Title>
-        </ListItem>
+        <CoffeeShop coffeeShop={coffeeShop}></CoffeeShop>
       ))}
       <StatusBar style="auto" />
     </View>
