@@ -6,7 +6,7 @@ import Constants from "expo-constants";
 import fixture from "./fixture";
 import axios from "axios";
 import CoffeeShop from "./CoffeeShop";
-
+import Ball from "./Ball";
 const api = axios.create({
   baseURL: "https://api.yelp.com/v3",
   headers: {
@@ -33,9 +33,10 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {coffeeShops.map((coffeeShop, i) => (
+      {/*coffeeShops.map((coffeeShop, i) => (
         <CoffeeShop coffeeShop={coffeeShop}></CoffeeShop>
-      ))}
+      ))*/}
+      <Ball></Ball>
       <StatusBar style="auto" />
     </View>
   );
